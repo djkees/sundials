@@ -5,6 +5,7 @@ on:
   workflow_call:
   # Allows manual triggering
   workflow_dispatch:
+  push:
 
 # Cancel any in-progress workflow runs
 concurrency:
@@ -23,7 +24,7 @@ jobs:
     runs-on: windows-2022
 
     steps:
-    - uses: fortran-lang/setup-fortran@v1
+    - uses: fortran-lang/setup-fortran@v2.0.0-beta.15
       id: setup-fortran
       with:
         compiler: intel
